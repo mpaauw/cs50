@@ -23,33 +23,26 @@ void print_pyramids(int height)
 {
     for(int i = 1; i <= height; i++)
     {
-        // build output string:
-        char output[height];
+        // print left side of pyramid:
         for(int j = 0; j < height; j++)
         {
             if(j < (height - i))
             {
-                output[j] = ' ';
+                printf(" ");
             }
             else
             {
-                output[j] = '#';    
+                printf("#");
             }
-        }
-        
-        // print left side of pyramid:
-        for(int j = 0; j < height; j++)
-        {
-            printf("%c", output[j]);
         }
         
         // print center gap:
         printf("  ");
         
         // print right side of pyramid:
-        for(int j = height - 1; j >= 0; j--)
+        for(int j = 0; j < i; j++)
         {
-            printf("%c", output[j]);
+            printf("#");
         }
         
         // finally, print line break:
